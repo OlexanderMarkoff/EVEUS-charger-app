@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tv_login_header"
+            style="@style/PageHeadlineItemTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_there"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_enter_ip_title"
+            style="@style/MainItemTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_enter_ip_title"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_login_header"/>
+
+        <LinearLayout
+            android:id="@+id/ll_ip_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_ip_title"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <EditText
+                android:id="@+id/et_ip_section1"
+                style="@style/IPEditTextStyle"
+                android:layout_marginEnd="12dp"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"/>
+
+            <EditText
+                android:id="@+id/et_ip_section2"
+                style="@style/IPEditTextStyle"
+                android:layout_marginEnd="12dp"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"/>
+
+            <EditText
+                android:id="@+id/et_ip_section3"
+                style="@style/IPEditTextStyle"
+                android:layout_marginEnd="12dp"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"/>
+
+            <EditText
+                android:id="@+id/et_ip_section4"
+                style="@style/IPEditTextStyle"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
